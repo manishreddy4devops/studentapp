@@ -23,4 +23,23 @@ public class StudentController {
     public Student createStudent(@RequestBody Student student) {
         return studentRepository.save(student);
     }
+
+     @PutMapping("/{id}")
+    public Student updateStudent(@PathVariable Long id, @RequestBody Student studentDetails) {
+        Student student = studentRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Student not found with id " + id));
+
+        student.setName(studentDetails.getName());
+        student.setEmail(studentDetails.getEmail());
+
+        return studentRepository.save(student);
+    }
+
+     @DeleteMapping("/{id}")
+    public void deleteStudent(@PathVariable Long id) {
+        Student student = studentRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Student not found with id " + id));
+
+        studentRepository.delete(student);
+    }
 }
