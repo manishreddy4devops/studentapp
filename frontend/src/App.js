@@ -1,24 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
+import StudentList from './components/StudentList';
+import AddStudent from './components/AddStudent';
 
 function App() {
-    const [students, setStudents] = useState([]);
-
-    useEffect(() => {
-        fetch("/api/students")
-            .then((response) => response.json())
-            .then((data) => setStudents(data));
-    }, []);
-
-    return (
-        <div>
-            <h1>Student List</h1>
-            <ul>
-                {students.map((student) => (
-                    <li key={student.id}>{student.name} - {student.email}</li>
-                ))}
-            </ul>
-        </div>
-    );
+  return (
+    <div className="App">
+      <h1>Student Management</h1>
+      <AddStudent />
+      <StudentList />
+    </div>
+  );
 }
 
 export default App;
