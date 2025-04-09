@@ -1,0 +1,89 @@
+/* Global styles */
+body {
+  background-color: #d4edda; /* Light green background */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Headings */
+h1 {
+  color: #155724; /* Dark green */
+  margin-bottom: 20px;
+}
+
+h2, h3 {
+  color: #004085; /* Dark blue */
+  margin-bottom: 15px;
+}
+
+/* Forms and inputs */
+form {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  background-color: #f8f9fa; /* Light gray */
+  width: 50%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #004085; /* Dark blue */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  background-color: #ffeeba; /* Light orange */
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745; /* Green */
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838; /* Darker green */
+}
+
+/* Student list */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  background-color: #f8f9fa; /* Light gray */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  margin-left: 10px;
+  background-color: #dc3545; /* Red */
+}
+
+li button:hover {
+  background-color: #c82333; /* Darker red */
+}
