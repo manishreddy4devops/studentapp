@@ -14,22 +14,14 @@ services:
     build:
       context: ./frontend
     container_name: frontend
-    networks:
-      - studentapp-network
-
-  nginx:
-    image: nginx:alpine
-    container_name: nginx
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - "80:80"
-    depends_on:
-      - backend
-      - frontend
     networks:
       - studentapp-network
+    depends_on:
+      - backend
 
 networks:
   studentapp-network:
     driver: bridge
+
