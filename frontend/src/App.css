@@ -78,7 +78,29 @@ li {
   justify-content: space-between;
   align-items: center;
 }
+.button-group {
+  display: flex;
+  gap: 8px; /* space between buttons */
+}
+.edit-btn {
+  position: absolute;
+  left: 50%;
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
 
+/* Right-align Delete button */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-left: auto;
+}
 li button {
   margin-left: 10px;
   background-color: #dc3545; /* Red */

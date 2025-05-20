@@ -68,8 +68,8 @@ function ManageStudent() {
         {students.map((student) => (
           <li key={student.id}>
             {student.name} - {student.email}
-            <button onClick={() => handleEdit(student)}>Edit</button>
-            <button onClick={() => handleDelete(student.id)}>Delete</button>
+            <button className="edit-btn" onClick={() => handleEdit(student)}>Edit</button>
+            <button className="delete-btn" onClick={() => handleDelete(student.id)}>Delete</button>
           </li>
         ))}
       </ul>

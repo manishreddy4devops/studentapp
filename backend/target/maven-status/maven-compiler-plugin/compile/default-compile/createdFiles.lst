@@ -1,4 +1,4 @@
-com/example/studentapp/controller/StudentController.class
-com/example/studentapp/StudentAppApplication.class
-com/example/studentapp/model/Student.class
-com/example/studentapp/repository/StudentRepository.class
+com\example\studentapp\repository\StudentRepository.class
+com\example\studentapp\StudentAppApplication.class
+com\example\studentapp\controller\StudentController.class
+com\example\studentapp\model\Student.class
