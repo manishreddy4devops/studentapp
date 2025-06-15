@@ -19,14 +19,7 @@ public class StudentController {
         return studentRepository.findAll();
     }
 
-    @GetMapping
-    public List<Student> getAllStudents() {
-        return studentRepository.findAll();
-    }
-    @GetMapping
-    public List<Student> getAllStudents() {
-        return studentRepository.findAll();
-    }
+  
 
     @PostMapping
     public Student createStudent(@RequestBody Student student) {
@@ -44,6 +37,30 @@ public class StudentController {
         return studentRepository.save(student);
     }
 
+
+    // ❗️Duplicate method 1
+    @PutMapping("/duplicate1/{id}")
+    public Student updateStudentDuplicate1(@PathVariable Long id, @RequestBody Student studentDetails) {
+        Student student = studentRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Student not found with id " + id));
+
+        student.setName(studentDetails.getName());
+        student.setEmail(studentDetails.getEmail());
+
+        return studentRepository.save(student);
+    }
+
+    // ❗️Duplicate method 2
+    @PutMapping("/duplicate2/{id}")
+    public Student updateStudentDuplicate2(@PathVariable Long id, @RequestBody Student studentDetails) {
+        Student student = studentRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Student not found with id " + id));
+
+        student.setName(studentDetails.getName());
+        student.setEmail(studentDetails.getEmail());
+
+        return studentRepository.save(student);
+    }
      @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable Long id) {
         Student student = studentRepository.findById(id)
